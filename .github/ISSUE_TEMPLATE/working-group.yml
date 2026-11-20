@@ -1,0 +1,20 @@
+name: Working group
+description: Announce a working group on a project or distillation
+title: "[WG] "
+labels: ["working-group"]
+body:
+  - type: input
+    id: scope
+    attributes:
+      label: Scope
+      description: The project (link) or distillation this group works on
+    validations: {required: true}
+  - type: textarea
+    id: members
+    attributes:
+      label: Members (at least two)
+    validations: {required: true}
+  - type: input
+    id: channel
+    attributes:
+      label: Communication channel (optional)

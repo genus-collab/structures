@@ -1,0 +1,36 @@
+name: Project proposal
+description: Propose a new workshop project in this strand
+title: "[Proposal] "
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals are not gatekept: the bar for opening a project is low.
+        The Strand Moderator will acknowledge it and may suggest a different repo or flag overlap.
+  - type: textarea
+    id: question
+    attributes:
+      label: Mathematical question
+      description: One paragraph describing the question.
+    validations: {required: true}
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Expected outputs
+      description: PDF, code, tables, data for the atlas…
+    validations: {required: true}
+  - type: textarea
+    id: tools
+    attributes:
+      label: Anticipated tools
+      description: Which AI tools, CAS or proof assistants do you expect to use (if any)?
+  - type: input
+    id: name
+    attributes:
+      label: Proposed directory name
+      placeholder: projects/<project-name>
+  - type: textarea
+    id: wg
+    attributes:
+      label: Initial working group (optional)

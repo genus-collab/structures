@@ -1,0 +1,49 @@
+name: Build workshop PDFs
+on:
+  push:
+    paths: ["projects/**"]
+  pull_request:
+    paths: ["projects/**"]
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    outputs:
+      projects: ${{ steps.find.outputs.projects }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: find
+        run: |
+          p=$(find projects -mindepth 2 -maxdepth 2 -name main.tex -not -path 'projects/_template/*' \
+               -printf '"%h",' | sed 's/,$//')
+          echo "projects=[$p]" >> "$GITHUB_OUTPUT"
+  build:
+    needs: list
+    if: needs.list.outputs.projects != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(needs.list.outputs.projects) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fetch TS-Lab style
+        run: curl -fsSL https://raw.githubusercontent.com/topological-strings-lab/meta/main/latex/tslab.sty -o ${{ matrix.project }}/tslab.sty
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: ${{ matrix.project }}
+      - name: Check committed PDF exists and is not stale
+        run: |
+          d=${{ matrix.project }}; pdf="$d/output/main.pdf"
+          [ -f "$pdf" ] || { echo "::error::$pdf is missing — commit the compiled PDF"; exit 1; }
+          src_t=$(git log -1 --format=%ct -- "$d"/*.tex "$d"/*.bib 2>/dev/null || true)
+          pdf_t=$(git log -1 --format=%ct -- "$pdf")
+          if [ -n "$src_t" ] && [ "$src_t" -gt "$pdf_t" ]; then
+            echo "::warning::$pdf is older than its sources — rebuild and commit it"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdf-${{ strategy.job-index }}
+          path: ${{ matrix.project }}/main.pdf
