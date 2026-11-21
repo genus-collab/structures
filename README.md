@@ -18,7 +18,7 @@ surveys go to arXiv through the distillation process described in the
 3. **Work** openly through commits and PRs. Keep `README.md` (status, methodology,
    claim status) up to date and commit the compiled `output/main.pdf`.
 4. **Complete** it when the PDF is a coherent body of results, the code reproduces
-   its outputs and the methodology statement is accurate; the Strand Moderator
+   its outputs and the methodology statement is accurate; the Strand Lead
    merges the final PR and updates [`INDEX.md`](INDEX.md).
 
 Cross-strand projects live in the most relevant repo, with a cross-reference
@@ -36,9 +36,9 @@ in the others' `INDEX.md`.
 
 In LaTeX use `\tslabstatus{<label>}` from `tslab.sty` (in `genus-collab/meta`).
 
-## Strand Moderators
+## Strand Leads
 
-- Strand Moderator: *to be appointed by the Steering Committee*
+- Strand Lead: *to be appointed by the Steering Committee*
 - Deputy: *to be appointed*
 
 ## Licence

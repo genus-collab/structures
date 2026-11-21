@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Proposals are not gatekept: the bar for opening a project is low.
-        The Strand Moderator will acknowledge it and may suggest a different repo or flag overlap.
+        The Strand Lead will acknowledge it and may suggest a different repo or flag overlap.
   - type: textarea
     id: question
     attributes:
