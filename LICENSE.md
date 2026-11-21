@@ -1,7 +1,7 @@
 # Licences
 
 This repository uses separate licences for different kinds of material
-(see the TS-Lab Community Charter, § Repository Structure, and Open Question
+(see the GENUS Community Charter, § Repository Structure, and Open Question
 "Licences", which is not yet settled; these defaults may change).
 
 | Material | Default licence |
@@ -10,4 +10,4 @@ This repository uses separate licences for different kinds of material
 | Code (`code/`, scripts, CI) | MIT Licence — see `LICENSE-CODE` |
 | Data (`data/`, atlas entries) | CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/legalcode |
 
-Attribution for CC BY material is to "the TS-Lab Collective".
+Attribution for CC BY material is to "the GENUS collaboration".

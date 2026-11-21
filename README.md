@@ -1,14 +1,14 @@
-# TS-Lab · Structures
+# GENUS · Structures
 
 **Global and nonperturbative structure.** Examples include: wavefunction interpretations of the topological string, BPS invariants as Stokes data for Riemann–Hilbert problems, resurgence analysis, open/closed wavefunctions and quantum mirror curves.
 
-This is one of the four thematic repositories of the
-[Topological String Lab](https://github.com/topological-strings-lab), a public collaborative
+This is one of the four thematic repositories of
+[GENUS](https://github.com/genus-collab), a public collaborative
 workspace for research in topological strings and enumerative geometry.
 Everything here is a *workshop* document: in progress, often AI-assisted,
-not refereed, and credited to the TS-Lab Collective. Curated, human-written
+not refereed, and credited to the GENUS collaboration. Curated, human-written
 surveys go to arXiv through the distillation process described in the
-[Community Charter](https://github.com/topological-strings-lab/meta/blob/main/CHARTER.md).
+[Community Charter](https://github.com/genus-collab/meta/blob/main/CHARTER.md).
 
 ## How to take part
 
@@ -34,7 +34,7 @@ in the others' `INDEX.md`.
 | `proved (human-checked)` | Checked by a contributor independent of the argument's originator |
 | `formally verified` | Machine-checked, with the formal statement validated by a subject expert |
 
-In LaTeX use `\tslabstatus{<label>}` from `tslab.sty` (in `topological-strings-lab/meta`).
+In LaTeX use `\tslabstatus{<label>}` from `tslab.sty` (in `genus-collab/meta`).
 
 ## Strand Moderators
 

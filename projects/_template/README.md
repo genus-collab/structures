@@ -3,7 +3,7 @@
 **Strand:** <foundations | solutions | structures | enhancements>
 **Status:** Proposed | Active | Complete | Archived
 **Proposal issue:** #<n>
-**Credited to:** the TS-Lab Collective
+**Credited to:** the GENUS collaboration
 
 ## Scope
 
