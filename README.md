@@ -34,7 +34,7 @@ in the others' `INDEX.md`.
 | `proved (human-checked)` | Checked by a contributor independent of the argument's originator |
 | `formally verified` | Machine-checked, with the formal statement validated by a subject expert |
 
-In LaTeX use `\tslabstatus{<label>}` from `tslab.sty` (in `genus-collab/meta`).
+In LaTeX use `\genusstatus{<label>}` from `genus.sty` (in `genus-collab/meta`).
 
 ## Strand Leads
 
